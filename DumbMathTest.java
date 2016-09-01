@@ -24,13 +24,20 @@ public class DumbMathTest {
 	}
 	
 	@Test(expected = ArithmeticException.class)
-	public void overflow() {
+	public void testAddOverflow() {
 		int a = Integer.MAX_VALUE;
 		int b = Integer.MAX_VALUE;
 		DumbMath.add(a, b);
 	}
 
-	@Test
+	@Test(expected = ArithmeticException.class)
+	public void testAddUnderflow() {
+		int a = Integer.MIN_VALUE;
+		int b = Integer.MIN_VALUE;
+		DumbMath.add(a, b);
+	}
+    
+    @Test
 	public void testAddFractionNumeratorZero() {
 		int n1 = 0;
 		int d1 = 5;
