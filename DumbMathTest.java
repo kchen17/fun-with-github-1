@@ -37,7 +37,7 @@ public class DumbMathTest {
 		DumbMath.add(a, b);
 	}
 
-    @Test
+  @Test
 	public void testAddFractionNumeratorZero() {
 		int n1 = 0;
 		int d1 = 5;
